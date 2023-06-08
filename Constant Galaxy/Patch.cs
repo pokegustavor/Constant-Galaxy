@@ -6,6 +6,7 @@ using System.Reflection;
 
 namespace Constant_Galaxy
 {
+    /*
     [HarmonyPatch(typeof(PLServer),"Update")]
     class Test 
     {
@@ -20,6 +21,7 @@ namespace Constant_Galaxy
             }
         }
     }
+    */
     [HarmonyPatch(typeof(PLServer), "Internal_NetworkBeginWarp")]
     internal class Patch
     {
@@ -55,7 +57,7 @@ namespace Constant_Galaxy
                     }
                 }
             }
-            PulsarModLoader.Utilities.Messaging.Notification("Finished");
+            //PulsarModLoader.Utilities.Messaging.Notification("Finished");
             yield break;
         }
     }
